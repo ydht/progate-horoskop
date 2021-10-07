@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Progate Week 3 - Horoskop</title>
+    </head>
+    <body>
+        <header>
+            <h1>Program Horoskop</h1>
+        </header>
+            <h1>Program Horoskop</h1>
+            <button onclick="getLuck()">Click here!</button>
+            <p id = "demo"></p>
+            <hr>
+        <script>
+            document.getElementbyId("demo").innerHTML = "Keberuntungan Anda hari ini: ";
+            
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            switch(randomNumber) {
+                case 1: document.write("Hebat!!<br />");
+                case 2: document.write("Hebat!!<br />");
+                case 3: document.write("Mengerikan...<br />");
+                case 4: document.write("Mengerikan...<br />");
+                default: document.write("Boleh juga!<br />");
+            };
+        </script>
+    </body>
+</html>
