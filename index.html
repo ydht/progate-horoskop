@@ -6,25 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Progate Week 3 - Horoskop</title>
     </head>
+    
     <body>
-        <header>
-            <h1>Program Horoskop</h1>
-        </header>
-            <h1>Program Horoskop</h1>
-            <button onclick="getLuck()">Click here!</button>
-            <p id = "demo"></p>
-            <hr>
+        <h1>Program Horoskop</h1>
+        <button onclick="Horoskop()">Click here!</button>
+        <p>Keberuntungan Anda hari ini: </p>
+        <hr>
+        <div id = "demo"></div>
+        
         <script>
-            document.getElementbyId("demo").innerHTML = "Keberuntungan Anda hari ini: ";
-            
-            const randomNumber = Math.floor(Math.random() * 10) + 1;
-            switch(randomNumber) {
-                case 1: document.write("Hebat!!<br />");
-                case 2: document.write("Hebat!!<br />");
-                case 3: document.write("Mengerikan...<br />");
-                case 4: document.write("Mengerikan...<br />");
-                default: document.write("Boleh juga!<br />");
+            const Horoskop = () => {
+                const randomNumber = Date.now();
+                const number = randomNumber % 10;
+
+                switch(number) {
+                    case 1:
+                    case 2:
+                        text = "Hebat!!";
+                        break;
+                    case 3:
+                    case 4:
+                        text = "Mengerikan...";
+                        break;
+                    default:
+                        text = "Boleh juga!";
+                };
+                
+                const divDemo = document.getElementById("demo");
+                const paragraf = document.createElement("p");
+                paragraf.innerHTML = text;
+                divDemo.append(paragraf);
             };
         </script>
+        
     </body>
 </html>
